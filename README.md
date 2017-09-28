@@ -7,16 +7,15 @@ React Component Material Design Dialog.
     $ yarn add react-md-dialog
 
 ## Example
+```javascript
+import { Dialog } from 'react-md-dialog';
 
-    import { Dialog } from 'react-md-dialog';
-
-    ...
-    <Dialog show={true}>
-      <div>
-        Hello world
-      </div>
-    </Dialog>
-    ...
+<Dialog show={true}>
+  <div>
+    Hello world
+  </div>
+</Dialog>
+```
 
 ## Props
 
@@ -28,11 +27,13 @@ errors | Shor error messages. | optional | array
 
 ## Errors
 
-    const errors = [
-      {
-        message: 'Example error 1.'
-      },
-      {
-        message: 'Example error 2.'
-      }
-    ]
+```javascript
+const errors = [
+  {
+    message: 'Example error 1.'
+  },
+  {
+    message: 'Example error 2.'
+  }
+]
+```

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "React Component Material Design Modal",
   "main": "index.js",
-  "repository": "https://github.com/mcnallydev/react-md-modal.git",
+  "repository": "https://github.com/mcnallydev/react-md-dialog.git",
   "author": "Paulo McNally <paulomcnally@gmail.com>",
   "license": "MIT",
   "files": [

@@ -6,11 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _Dialog = require('./components/Dialog');
 
-Object.defineProperty(exports, 'Dialog', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Dialog).default;
-  }
-});
+var _Dialog2 = _interopRequireDefault(_Dialog);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Dialog2.default;

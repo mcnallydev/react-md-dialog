@@ -1,1 +1,3 @@
-export { default as Dialog } from './components/Dialog';
+import Dialog from './components/Dialog';
+
+export default Dialog;

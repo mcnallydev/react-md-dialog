@@ -8,7 +8,7 @@ React Component Material Design Dialog.
 
 ## Example
 ```javascript
-import { Dialog } from 'react-md-dialog';
+import Dialog from 'react-md-dialog';
 
 <Dialog show={true}>
   <div>

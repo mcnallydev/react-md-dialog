@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dialog } from '../dist'
+import Dialog from '../dist'
 
 const errors = [
   {

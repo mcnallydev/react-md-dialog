@@ -1,71 +1,52 @@
-import React , { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ProgressBar } from 'react-md-progress-bar';
 import { Container, Wrapper, Errors, ErrorItem, Header, Title, Body } from './tags';
 
 class Dialog extends Component {
-
-  /**
-   * React Component constructor.
-   * @param props
-   */
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: props.show,
-      progressBar: props.progressBar,
-      errors: props.errors
-    }
-  }
-
-  /**
-   * Update state based nextProps.
-   * @param nextProps
-   */
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      show: nextProps.show,
-      progressBar: nextProps.progressBar,
-      errors: nextProps.errors
-    });
+  static propTypes = {
+    errors: PropTypes.array,
+    progressBar: PropTypes.bool,
+    show: PropTypes.bool,
   }
 
   /**
    * Render progress.
+   *
    * @returns {XML}
    */
   renderProgress() {
-    if (this.state.progressBar) {
+    if (this.props.progressBar) {
       return (
         <ProgressBar
-          show={true}
           overlay={true}
+          show={true}
         />
       );
-    } else {
-      return (null);
     }
   }
 
   /**
    * Render body.
+   *
    * @returns {XML}
    */
   renderBody() {
-    return(
+    return (
       <Body>
-        { this.props.children }
+        {this.props.children}
       </Body>
-    )
+    );
   }
 
   /**
    * Render modal.
+   *
    * @returns {XML}
    */
   renderModal() {
     return(
-      <Container style={ { ...{ height: window.innerHeight } } }>
+      <Container style={{ height: window.innerHeight }}>
         <Wrapper>
           { this.renderProgress() }
           { this.renderErrors() }
@@ -77,11 +58,12 @@ class Dialog extends Component {
 
   /**
    * Render error message.
+   *
    * @returns {XML}
    */
   renderErrors() {
-    if (this.state.errors) {
-      const errors = this.state.errors.map((error, index) =>
+    if (this.props.errors) {
+      const errors = this.props.errors.map((error, index) =>
         <ErrorItem key={index}>
           {error.message}
         </ErrorItem>
@@ -92,24 +74,17 @@ class Dialog extends Component {
           {errors}
         </Errors>
       );
-    } else {
-      return (null);
     }
   }
 
   /**
    * Render error message.
+   *
    * @returns {XML}
    */
   render() {
-    return (this.state.show) ? this.renderModal() : null;
+    return this.props.show ? this.renderModal() : null;
   }
-}
-
-Dialog.propTypes = {
-  show: PropTypes.bool,
-  progressBar: PropTypes.bool,
-  errors: PropTypes.array,
 }
 
 export default Dialog;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 export const Container = styled.div`
   position: absolute;
@@ -28,7 +28,6 @@ export const Wrapper = styled.div`
     margin: 0;
     box-shadow: none;
   }
-}
 `
 
 export const Header = styled.div`

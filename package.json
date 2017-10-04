@@ -17,11 +17,13 @@
     "dist": "yarn run clean && yarn run build"
   },
   "dependencies": {
+    "babel-plugin-emotion": "7.3.2",
+    "emotion": "7.3.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-md-progress-bar": "^0.0.1",
-    "styled-components": "^2.2.0"
+    "react-emotion": "7.3.2",
+    "react-md-progress-bar": "^0.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
